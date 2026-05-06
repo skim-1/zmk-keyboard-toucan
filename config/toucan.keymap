@@ -12,13 +12,14 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
+            flavor = "tap-preferred";
             bindings = <&mo &mkp>;
         };
     };
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
-            if-layers = <1 2>;
+            if-layers = <2>;
             then-layer = <3>;
         };
     };
