@@ -33,4 +33,13 @@ static void draw_level_peripheral(lv_obj_t *canvas, const struct status_state *s
 
 void draw_battery_peripheral_status(lv_obj_t *canvas, const struct status_state *state) {
     draw_level_peripheral(canvas, state);
+    lv_draw_label_dsc_t label_dsc;
+    lv_draw_label_dsc_init(&label_dsc);
+    label_dsc.color = lv_color_white();
+    char buf[5];
+    snprintf(buf, sizeof(buf), "%d", state->battery_p);
+    lv_canvas_draw_text(canvas, 80, 25, 40, &label_dsc, buf);
+    if (state->charging_p) {
+        lv_canvas_draw_text(canvas, 102, 10, 20, &label_dsc, "+");
+    }
 }
