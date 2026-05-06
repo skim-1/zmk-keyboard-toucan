@@ -12,7 +12,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            bindings = <&mo>, <&mkp RCLK>;
+            bindings = <&mo &mkp>;
         };
     };
     conditional_layers {
