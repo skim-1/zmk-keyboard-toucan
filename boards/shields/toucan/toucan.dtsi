@@ -98,16 +98,16 @@
         precise_scaler: precise_scaler {
             compatible = "zmk,input-processor-scaler";
             #input-processor-cells = <2>;
-            type = <INPUT_EV_REL>;
-            codes = <INPUT_REL_X INPUT_REL_Y>;
+            type = <2>;
+            codes = <0 1>;
             track-remainders;
         };
 
         precise_scroll_scaler: precise_scroll_scaler {
             compatible = "zmk,input-processor-scaler";
             #input-processor-cells = <2>;
-            type = <INPUT_EV_REL>;
-            codes = <INPUT_REL_WHEEL INPUT_REL_HWHEEL>;
+            type = <2>;
+            codes = <8 6>;
             track-remainders;
         };
     };
