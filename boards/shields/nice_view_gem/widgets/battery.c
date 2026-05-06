@@ -34,10 +34,9 @@ static void draw_level(lv_obj_t *canvas, const struct status_state *state) {
 
 void draw_battery_status(lv_obj_t *canvas, const struct status_state *state) {
     draw_level(canvas, state);
-    if (state->charging) {
-        lv_draw_label_dsc_t label_dsc;
-        lv_draw_label_dsc_init(&label_dsc);
-        label_dsc.color = lv_color_white();
-        lv_canvas_draw_text(canvas, 8, 10, 20, &label_dsc, "+");
-    }
+    // temporary: always draw + to test if drawing works at all
+    lv_draw_label_dsc_t label_dsc;
+    lv_draw_label_dsc_init(&label_dsc);
+    label_dsc.color = lv_color_white();
+    lv_canvas_draw_text(canvas, 8, 10, 20, &label_dsc, "+");
 }
